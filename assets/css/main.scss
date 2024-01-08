@@ -1,0 +1,285 @@
+@import "landing_page_style.css";
+
+$x: #bada55;
+$blue: #96b9d9;
+// $primary: $x;
+$mycustom-dark: #495057;
+
+.btn-mycustom-dark {
+  background-color: var(--mycustom-dark) !important;
+}
+.btn-mycustom-dark:hover {
+  background-color: var(--pri) !important;
+}
+
+// $custom-colors: {
+//   'mycustom-dark':#495057: ;
+// }
+
+// $theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+#cta-header-wrapper a i {
+  animation: phone-shake 0.5s ease-in-out infinite;
+  font-size: 18px;
+}
+
+@keyframes phone-shake {
+  15%,
+  85% {
+    transform: rotate(0deg);
+  }
+  35%,
+  45%,
+  55%,
+  65% {
+    color: transparent;
+    transform: rotate(10deg);
+  }
+  30%,
+  40%,
+  50%,
+  60%,
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+#social_proof--header {
+  div {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    max-width: 120px;
+    border: 1px solid var(--pri);
+    padding: 8px 12px;
+  }
+  img {
+    // filter: grayscale(50%);
+    margin-right: 8px;
+  }
+
+  :first-child img {
+    // max-height: 40px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  :nth-child(2) img {
+    // max-height: 40px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  :nth-child(3) img {
+    // max-height: 60px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// arrow heading
+.box-arrow {
+  position: relative;
+  width: 150px;
+  height: 2px;
+  background: var(--pri);
+}
+.box-arrow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  rotate: 152deg;
+  right: 6px;
+  bottom: 0px;
+  width: 2px;
+  height: 25px;
+  border-left: 3px solid var(--mark0);
+}
+
+.box-arrow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  rotate: -152deg;
+  top: 1px;
+  right: 6px;
+  bottom: 0px;
+  width: 2px;
+  height: 25px;
+  // border-top-left-radius: 100%;
+  // border-top: 3px solid var(--mark0);
+  border-left: 3px solid var(--mark0);
+}
+
+/* ******************************* */
+
+// arrow heading
+
+h2::after {
+  content: none;
+}
+h2::before {
+  content: none;
+}
+
+.img-arrow {
+  max-width: 100px;
+}
+
+#cta-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+// wa icon anim
+.btn-custom {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+  font-family: Vazir;
+}
+
+.btn-custom:focus {
+  outline: 0;
+}
+
+.call-wrraper {
+  display: inline-block;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.btn-call {
+  font-size: 2rem;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0;
+  z-index: 4;
+  /* -webkit-box-shadow: -1px 3px 12px 1px rgba(0,0,0,0.41);
+  -moz-box-shadow: -1px 3px 12px 1px rgba(0,0,0,0.41);
+  box-shadow: -1px 3px 12px 1px rgba(0,0,0,0.41); */
+}
+
+.btn-call i {
+  transition: all 1s;
+}
+
+.btn-call:hover i {
+  color: #fff;
+  transform: rotate(360deg);
+}
+
+.animation-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-one,
+.animation-tow,
+.animation-tree {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  transition: 0.4s;
+  animation-name: btnanimait;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.animation-one {
+  background-color: rgb(0 0 0 / 42%);
+}
+
+.animation-tow {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #495057;
+  animation-delay: 0.3s;
+}
+
+.animation-tree {
+  width: 85px;
+  height: 85px;
+  border: 1px solid #495057;
+  animation-delay: 0.5s;
+}
+
+@keyframes btnanimait {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+// wa icon anim
+
+h2 {
+  text-transform: uppercase;
+}
+
+#emi-chart {
+  // background: var(--pri);
+  background: linear-gradient(160deg, #495057 0%, #000 100%);
+  color: white;
+  // background: var(--mark0);
+  // background: url(../img/emi-calc-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#company-info {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.btn-primary {
+  padding: 14px 30px;
+}
+.btn-mycustom-dark {
+  // background-color: var(--mycustom-dark) !important;
+  background-color: #2b2b2d !important;
+  color: #fff !important;
+}
+.btn-mycustom-dark:hover {
+  background-color: var(--pri) !important;
+}
+
+body #owl-01 .owl-prev,
+body #owl-01 .owl-next {
+  display: flex;
+}
